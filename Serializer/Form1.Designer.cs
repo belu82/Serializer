@@ -36,6 +36,8 @@
             this.phoneLabel = new System.Windows.Forms.Label();
             this.prevButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.buttonFirst = new System.Windows.Forms.Button();
             this.lastButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -95,6 +97,7 @@
             this.prevButton.TabIndex = 6;
             this.prevButton.Text = "Previous";
             this.prevButton.UseVisualStyleBackColor = true;
+            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
             // nextButton
             // 
@@ -104,15 +107,37 @@
             this.nextButton.TabIndex = 7;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(268, 216);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // buttonFirst
+            // 
+            this.buttonFirst.Location = new System.Drawing.Point(56, 270);
+            this.buttonFirst.Name = "buttonFirst";
+            this.buttonFirst.Size = new System.Drawing.Size(75, 23);
+            this.buttonFirst.TabIndex = 9;
+            this.buttonFirst.Text = "First";
+            this.buttonFirst.UseVisualStyleBackColor = true;
+            this.buttonFirst.Click += new System.EventHandler(this.buttonFirst_Click);
             // 
             // lastButton
             // 
-            this.lastButton.Location = new System.Drawing.Point(268, 216);
+            this.lastButton.Location = new System.Drawing.Point(192, 270);
             this.lastButton.Name = "lastButton";
             this.lastButton.Size = new System.Drawing.Size(75, 23);
-            this.lastButton.TabIndex = 8;
+            this.lastButton.TabIndex = 10;
             this.lastButton.Text = "Last";
             this.lastButton.UseVisualStyleBackColor = true;
+            this.lastButton.Click += new System.EventHandler(this.lastButton_Click);
             // 
             // Form1
             // 
@@ -120,6 +145,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 338);
             this.Controls.Add(this.lastButton);
+            this.Controls.Add(this.buttonFirst);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.phoneLabel);
@@ -146,6 +173,8 @@
         private System.Windows.Forms.Label phoneLabel;
         private System.Windows.Forms.Button prevButton;
         private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button buttonFirst;
         private System.Windows.Forms.Button lastButton;
     }
 }
